@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="actual-SHA-384-hash"
+      crossorigin="anonymous"
+    />
+
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <h2 class="title">Password Generator</h2>
+    <div class="password">
+      <span class="title-password">P4$5W0rD!</span>
+      <div class="password-copied">
+        <span class="copied"></span>
+        <i class="far fa-copy copy-icon"></i>
+      </div>
+    </div>
+    <div class="container">
+      <div class="contained">
+        <div class="length">
+          <h3 class="line-name">Character Length</h3>
+          <output class="line-num" id="rangevalue">10</output>
+        </div>
+
+        <input
+          type="range"
+          id="range"
+          class="slider"
+          value="10"
+          min="0"
+          max="20"
+          oninput="rangevalue.value=value"
+        />
+
+        <div class="wrapper">
+          <div class="one-line"></div>
+          <div class="one-line">
+            <input type="checkbox" id="uppercase" />
+            <label for="uppercase">Include Uppercase Letters</label>
+          </div>
+          <div class="one-line">
+            <input type="checkbox" id="lowercase" />
+            <label for="lowercase">Include Lowercase Letters</label>
+          </div>
+          <div class="one-line">
+            <input type="checkbox" id="numbers" />
+            <label for="numbers">Include Numbers</label>
+          </div>
+          <div class="one-line">
+            <input type="checkbox" id="symbols" />
+            <label for="symbols">Include Symbols</label>
+          </div>
+        </div>
+        <div class="password-strength">
+          <h3>STRENGTH</h3>
+          <div class="level">
+            <h3 class="level-name">MEDIUM</h3>
+            <div class="bars">
+              <div class="bar bar-1"></div>
+              <div class="bar bar-2"></div>
+              <div class="bar bar-3"></div>
+              <div class="bar bar-4"></div>
+            </div>
+          </div>
+        </div>
+        <button class="btn">GENERATE <span>-></span></button>
+      </div>
+    </div>
+  </body>
+</html>
